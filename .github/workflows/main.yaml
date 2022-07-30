@@ -14,6 +14,6 @@ jobs:
     - uses: actions/checkout@master
     - uses: ajay0688/action-tagging@master
       with:
-        INPUT_GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         source_file: "build.gradle.txt"
         extraction_regex: "version\\s*=\\s*\\d+.\\d+.\\d+"
