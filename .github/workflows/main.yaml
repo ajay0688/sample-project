@@ -16,4 +16,4 @@ jobs:
       with:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         source_file: "build.gradle.txt"
-        extraction_regex: "(version)\s*(=)\s*(\d+)(.)(\d+)(.)(\d+)"
+        extraction_regex: "(version)\\s*(=)\\s*(\\d+)(.)(\\d+)(.)(\\d+)"
