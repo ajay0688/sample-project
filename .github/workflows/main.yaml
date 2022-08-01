@@ -7,6 +7,9 @@ on:
     branches:
     - master
 
+env:
+  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,6 +17,6 @@ jobs:
     - uses: actions/checkout@master
     - uses: ajay0688/action-tagging@master
       with:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         source_file: "build.gradle.txt"
+        tag_prefix: "v"
         extraction_regex: "version\\s*=\\s*\\d+.\\d+.\\d+"
